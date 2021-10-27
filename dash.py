@@ -4,7 +4,7 @@ import pandas as pd
 import io
 
 buffer = io.BytesIO()
-base = "teste"
+base = "https://raw.githubusercontent.com/andrehsilva/licencas/main/base.csv"
 df = pd.read_csv(base, sep=';')
 df = df.drop(columns=['TenantName','TenantId','SchoolId','ComboId','OrderDate','ComboCode','ComboName','LicenceId', 'LicenseStatus', 'Brand'])
 df = df.loc[(df['OrderStatus'] == '1') &(df['OrderStatus'] == '1')&(df['Profile']=='Aluno')]
