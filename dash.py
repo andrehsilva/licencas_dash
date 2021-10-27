@@ -4,8 +4,8 @@ import pandas as pd
 import io
 
 buffer = io.BytesIO()
-
-df = pd.read_csv('/home/andrerodrigues/Documentos/projects-python/dash_licenca/LEX-listagem_de_licencas-20211026-000002.csv', sep=';')
+base = "teste"
+df = pd.read_csv(base, sep=';')
 df = df.drop(columns=['TenantName','TenantId','SchoolId','ComboId','OrderDate','ComboCode','ComboName','LicenceId', 'LicenseStatus', 'Brand'])
 df = df.loc[(df['OrderStatus'] == '1') &(df['OrderStatus'] == '1')&(df['Profile']=='Aluno')]
 df = df.drop(columns=['Profile','OrderStatus'])
